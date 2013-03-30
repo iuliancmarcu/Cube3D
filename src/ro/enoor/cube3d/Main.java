@@ -8,7 +8,6 @@ import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import ro.enoor.cube3d.world.World;
 import ro.enoor.cube3d.world.WorldRenderer;
-import ro.enoor.cube3d.world.rendering.Camera;
 
 public class Main {
     public static final int WIDTH = 800;
@@ -20,15 +19,18 @@ public class Main {
     private long lastFrame;
     private long lastFPS;
     private int fps;
+
     private long getTime() {
         return (Sys.getTime() * 1000) / Sys.getTimerResolution();
     }
+
     private int getDelta() {
         long currentTime = getTime();
         int delta = (int) (currentTime - lastFrame);
         lastFrame = getTime();
         return delta;
     }
+
     public void updateFPS() {
         if (getTime() - lastFPS > 1000) {
             Display.setTitle("FPS: " + fps);
@@ -64,7 +66,6 @@ public class Main {
 
             updateFPS();
 
-//            Display.setTitle(Camera.getInstance().toString());
             Display.update();
             Display.sync(60);
         }
@@ -88,11 +89,14 @@ public class Main {
         if (Keyboard.isKeyDown(Keyboard.KEY_D))
             renderer.camera.walkRight(0.2f);
 
-        if(Keyboard.isKeyDown(Keyboard.KEY_SPACE))
+        if (Keyboard.isKeyDown(Keyboard.KEY_SPACE))
             renderer.camera.ascend(0.25f);
 
-        if(Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
+        if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
             renderer.camera.descend(0.2f);
+
+        /*if(Keyboard.isKeyDown(Keyboard.KEY_R))
+            ChunkManager.getInstance().updateChunks();*/
     }
 
     public static void main(String[] args) {

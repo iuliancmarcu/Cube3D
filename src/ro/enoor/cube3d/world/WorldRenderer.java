@@ -2,11 +2,10 @@ package ro.enoor.cube3d.world;
 
 import org.lwjgl.util.vector.Vector3f;
 import ro.enoor.cube3d.Main;
-import ro.enoor.cube3d.level.chunk.ChunkManager;
 import ro.enoor.cube3d.world.rendering.Camera;
 
 import static org.lwjgl.opengl.GL11.*;
-import static org.lwjgl.util.glu.GLU.*;
+import static org.lwjgl.util.glu.GLU.gluPerspective;
 
 public class WorldRenderer {
     public World world;
@@ -14,7 +13,7 @@ public class WorldRenderer {
 
     public WorldRenderer(World world) {
         this.world = world;
-        camera.position = new Vector3f(-16 * 2f, 18f, -16 * 2f);
+        camera.position = new Vector3f(0f, 0f, 0f);
     }
 
     public void initGL() {

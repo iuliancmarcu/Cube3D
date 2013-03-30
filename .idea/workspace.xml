@@ -5,18 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4421f674-d1c6-4105-bb8f-1aa9c33457db" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/octree/OTree.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/Chunk.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/Chunk.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkManager.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkRenderer.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkRenderer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Frustum.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Frustum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/Main.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/World.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/World.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/WorldRenderer.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/WorldRenderer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Cube3D.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364506838067" ignored="false" />
-    <file path="/Main.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364598485088" ignored="false" />
+    <file path="/fragment.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364669245714" ignored="false" />
+    <file path="/Main.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364679386321" ignored="false" />
     <file path="/WorldRenderer.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364511760810" ignored="false" />
     <file path="$PROJECT_DIR$/../LWJGL Larning/src/ro/enoor/YouTube/Demo3D.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364147782224" ignored="false" />
-    <file path="/World.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364512037765" ignored="false" />
+    <file path="/World.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364681816349" ignored="false" />
     <file path="/Block.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364635046641" ignored="false" />
-    <file path="/Level.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364244092432" ignored="false" />
+    <file path="/Level.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364668495986" ignored="false" />
     <file path="/Camera.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364598016089" ignored="false" />
     <file path="$PROJECT_DIR$/../LWJGL Larning/src/ro/enoor/YouTube/TextureDemo.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364165335108" ignored="false" />
     <file path="/TextureDemo.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364165317452" ignored="false" />
@@ -27,20 +34,24 @@
     <file path="/TerrainRenderer.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364247780144" ignored="false" />
     <file path="/BlockOld.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364248029688" ignored="false" />
     <file path="/BlockRenderer.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364252760429" ignored="false" />
-    <file path="/Chunk.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364636764392" ignored="false" />
+    <file path="/Chunk.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364676660817" ignored="false" />
     <file path="/Vec2f.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364250014980" ignored="false" />
     <file path="/ChunkMesh.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364250870338" ignored="false" />
-    <file path="/ChunkManager.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364419582647" ignored="false" />
+    <file path="/ChunkManager.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364681752962" ignored="false" />
     <file path="$PROJECT_DIR$/../Voxby/src/com/voxby/game/ChunkManager.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364284817322" ignored="false" />
     <file path="/ChunkNew.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364330140934" ignored="false" />
     <file path="/ChunkOld.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364377639644" ignored="false" />
-    <file path="/ChunkRenderer.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364638251049" ignored="false" />
+    <file path="/ChunkRenderer.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364681015706" ignored="false" />
     <file path="/Frustum.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364630494442" ignored="false" />
     <file path="/Code.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364545600934" ignored="false" />
     <file path="/Octree.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364633410742" ignored="false" />
-    <file path="/OTree.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364633545452" ignored="false" />
+    <file path="/OTree.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364681270886" ignored="false" />
     <file path="/OTreeNode.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364637586297" ignored="false" />
-    <file path="/Dummy.txt" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364666594434" ignored="false" />
+    <file path="/Dummy.txt" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364681876386" ignored="false" />
+    <file path="/OTreeChild.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364668835610" ignored="false" />
+    <file path="/OTreeElement.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364669330895" ignored="false" />
+    <file path="/OTreeRectangle.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364669406692" ignored="false" />
+    <file path="/a.dummy" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364680269202" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,10 +111,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="OTree.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/octree/OTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="23" selection-start="319" selection-end="319" vertical-scroll-proportion="0.6363636">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChunkManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="22" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#312#319#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorldRenderer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/WorldRenderer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="World.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/World.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="35" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Chunk.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/Chunk.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="44" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0">
+            <state line="41" column="0" selection-start="1060" selection-end="1060" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,46 +162,10 @@
       <file leaf-file-name="ChunkRenderer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="93" selection-start="1796" selection-end="1796" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Frustum.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Frustum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="70" selection-start="6827" selection-end="6831" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WorldRenderer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/WorldRenderer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="61" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="World.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/World.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="20" selection-start="238" selection-end="238" vertical-scroll-proportion="0.23817864">
+            <state line="69" column="9" selection-start="2422" selection-end="2422" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="29" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -164,6 +178,11 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Marcu Iulian" />
+      </list>
+    </option>
     <option name="SYNC_SETTING" value="DONT" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -181,21 +200,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/world/chunk/Chunk.java" />
-        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/world/chunk/ChunkRenderer.java" />
-        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/block/Code.java" />
-        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Camera.java" />
-        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/Main.java" />
-        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Frustum.java" />
-        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/Octree.java" />
-        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/OTree.java" />
-        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/OTree.java" />
-        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/block/Block.java" />
         <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/Cube.java" />
         <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/OTreeNode.java" />
+        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/Level.java" />
+        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/OTreeChild.java" />
+        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/OTree.java" />
+        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/octree/OTreeElement.java" />
+        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/octree/OTreeRectangle.java" />
+        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Frustum.java" />
         <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/Chunk.java" />
         <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkRenderer.java" />
+        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/octree/OTree.java" />
+        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Camera.java" />
         <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/world/WorldRenderer.java" />
+        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/Main.java" />
+        <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkManager.java" />
         <option value="$PROJECT_DIR$/src/ro/enoor/cube3d/world/World.java" />
       </list>
     </option>
@@ -232,7 +251,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -252,7 +271,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -359,6 +377,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="octree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cube3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cube3D" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cube3d" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="chunk" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -391,26 +435,43 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="OverrideImplement.combined" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="136" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="154" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="158" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="C:/Program Files (x86)/Git/cmd/git.exe" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="160" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="832" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="840" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="153" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="147" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
@@ -419,6 +480,9 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Others\Java\Cube3D" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ro.enoor.cube3d.level.octree" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ro.enoor.cube3d.level" />
@@ -461,19 +525,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -499,6 +550,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -597,17 +661,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.4939394" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283082" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32663316" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39698493" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5007576" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32998326" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -617,7 +682,6 @@
       <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="554" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.67363346" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
@@ -628,7 +692,7 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <value>
         <are-packages-shown value="false" />
@@ -660,7 +724,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -682,47 +746,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/libs/jars/lwjgl.jar!/org/lwjgl/opengl/GLChecks.class">
+    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="3553" selection-end="3553" vertical-scroll-proportion="-10.36" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/block/BlockType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="8" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_17/src.zip!/java/nio/Buffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="491" column="0" selection-start="15584" selection-end="15584" vertical-scroll-proportion="0.029668411" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Camera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="5" selection-start="2255" selection-end="2255" vertical-scroll-proportion="0.0">
+        <state line="21" column="1" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="73" selection-end="73" vertical-scroll-proportion="0.11908932">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_17/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="818" column="0" selection-start="30019" selection-end="30019" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_17/src.zip!/java/nio/FloatBuffer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="831" column="0" selection-start="19457" selection-end="19457" vertical-scroll-proportion="0.0" />
+        <state line="831" column="0" selection-start="19457" selection-end="19457" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_17/src.zip!/java/nio/DirectFloatBufferU.java">
@@ -730,37 +765,28 @@
         <state line="356" column="0" selection-start="5933" selection-end="5933" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/Chunk.java">
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="44" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Frustum.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="70" selection-start="6827" selection-end="6831" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.6619966" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/block/BlockType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="12" selection-start="180" selection-end="180" vertical-scroll-proportion="-0.014925373">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkRenderer.java">
+    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="93" selection-start="1796" selection-end="1796" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="29" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/WorldRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="61" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+        <state line="90" column="0" selection-start="2213" selection-end="2213" vertical-scroll-proportion="0.5771144">
           <folding />
         </state>
       </provider>
@@ -772,19 +798,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/Chunk.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="41" column="0" selection-start="1060" selection-end="1060" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="22" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#312#319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="9" selection-start="2422" selection-end="2422" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="20" selection-start="238" selection-end="238" vertical-scroll-proportion="0.23817864">
+        <state line="15" column="35" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/WorldRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="294" selection-end="294" vertical-scroll-proportion="0.3512748">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Frustum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="126" column="99" selection-start="7350" selection-end="7350" vertical-scroll-proportion="0.61495847">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/octree/OTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="23" selection-start="319" selection-end="319" vertical-scroll-proportion="0.6363636">
+          <folding />
         </state>
       </provider>
     </entry>
