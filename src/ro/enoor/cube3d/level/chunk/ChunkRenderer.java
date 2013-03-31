@@ -20,16 +20,23 @@ public abstract class ChunkRenderer {
     static FloatBuffer positionBuffer;
     static FloatBuffer colorBuffer;
 
+    /**
+     * Sets the chunk's VBO buffers after calculating every cube faces.
+     *
+     * @param chunk Chunk that should be calculated.
+     */
     public static void generateVBO(Chunk chunk) {
         vertexCount = 0;
 
         usedChunk = chunk;
 
-        positionBuffer = BufferUtils.createFloatBuffer(SIZE * SIZE * SIZE * 6 * 4 * 3);
-        colorBuffer = BufferUtils.createFloatBuffer(SIZE * SIZE * SIZE * 6 * 4 * 3);
-
-        generateOctreeVBO(chunk.tree);
-
+        /*
+         * SIZE * SIZE * SIZE * 6 * 6 = (SIZE * SIZE * SIZE * 6 * 4 * 3) / 2
+         * There could be maximum (maximum number of cubes * 2 vertices.
+         */
+        positionBuffer = BufferUtils.createFloatBuffer(SIZE * SIZE * SIZE * 6 * 4 * 3 / 2);
+        colorBuffer = BufferUtils.createFloatBuffer(SIZE * SIZE * SIZE * 6 * 4 * 3 / 2);
+        generateOTreeVBO(new OTree(chunk.offsetX, chunk.offsetY, chunk.offsetZ, SIZE));
         positionBuffer.flip();
         colorBuffer.flip();
 
@@ -53,17 +60,27 @@ public abstract class ChunkRenderer {
         colorBuffer = null;
     }
 
-    private static void generateOctreeVBO(OTree tree) {
+    /**
+     * Breaks chunk in OTrees and checks their visibility.
+     *
+     * @param tree OTree that should be tested against frustum and broke.
+     */
+    private static void generateOTreeVBO(OTree tree) {
         if (Camera.getInstance().frustum.cubeInFrustum(tree.x, tree.y, tree.z, tree.size)) {
             if (tree.breakTree()) {
                 for (int i = 0; i < 8; i++)
-                    generateOctreeVBO(tree.children[i]);
+                    generateOTreeVBO(tree.children[i]);
             } else if (manager.getBlockInWorld(tree.x, tree.y, tree.z) != BlockType.AIR.id) {
                 generateBlockVBO(tree.x, tree.y, tree.z);
             }
         }
     }
 
+    /**
+     * @param x Block's X in WORLD coordinates.
+     * @param y Block's Y in WORLD coordinates.
+     * @param z Block's Z in WORLD coordinates.
+     */
     private static void generateBlockVBO(int x, int y, int z) {
         if (manager.getBlockInWorld(x, y, z + 1) == BlockType.AIR.id) {
             positionBuffer.put(new float[]{x, y, z + 1f, x + 1f, y, z + 1f, x + 1f, y + 1f, z + 1f, x, y + 1f, z + 1f});
@@ -102,6 +119,11 @@ public abstract class ChunkRenderer {
         }
     }
 
+    /**
+     * Renders the chunk using it's VBOs.
+     *
+     * @param chunk Chunk that should be rendered.
+     */
     public static void render(Chunk chunk) {
         glBindBuffer(GL_ARRAY_BUFFER, chunk.vboPositionHandle);
         glVertexPointer(3, GL_FLOAT, 0, 0L);

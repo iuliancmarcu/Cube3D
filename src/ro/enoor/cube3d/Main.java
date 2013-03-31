@@ -94,9 +94,6 @@ public class Main {
 
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
             renderer.camera.descend(0.2f);
-
-        /*if(Keyboard.isKeyDown(Keyboard.KEY_R))
-            ChunkManager.getInstance().updateChunks();*/
     }
 
     public static void main(String[] args) {

@@ -17,8 +17,8 @@ public class ChunkManager {
             ChunkRenderer.render(chunk);
     }
 
-    public void addChunk(int x, int z) {
-        loadedChunks.add(new Chunk(x, z));
+    public void addChunk(int x, int y, int z) {
+        loadedChunks.add(new Chunk(x, y, z));
     }
 
     public void updateChunks() {
@@ -28,17 +28,19 @@ public class ChunkManager {
 
     public int getBlockInWorld(int x, int y, int z) {
         int chunkX = x / Chunk.SIZE;
+        int chunkY = y / Chunk.SIZE;
         int chunkZ = z / Chunk.SIZE;
         x %= Chunk.SIZE;
+        y %= Chunk.SIZE;
         z %= Chunk.SIZE;
 
-        return getBlockInChunk(x, y, z, chunkX, chunkZ);
+        return getBlockInChunk(x, y, z, chunkX, chunkY, chunkZ);
     }
 
-    public int getBlockInChunk(int x, int y, int z, int chunkX, int chunkZ) {
+    public int getBlockInChunk(int x, int y, int z, int chunkX, int chunkY, int chunkZ) {
         Chunk searchedChunk = null;
         for (Chunk chunk : loadedChunks) {
-            if (chunk.chunkX == chunkX && chunk.chunkZ == chunkZ) {
+            if (chunk.chunkX == chunkX && chunk.chunkY == chunkY && chunk.chunkZ == chunkZ) {
                 searchedChunk = chunk;
                 break;
             }

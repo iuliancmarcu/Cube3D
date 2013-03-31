@@ -2,6 +2,7 @@ package ro.enoor.cube3d.world;
 
 import org.lwjgl.util.vector.Vector3f;
 import ro.enoor.cube3d.Main;
+import ro.enoor.cube3d.level.chunk.ChunkManager;
 import ro.enoor.cube3d.world.rendering.Camera;
 
 import static org.lwjgl.opengl.GL11.*;
@@ -19,7 +20,7 @@ public class WorldRenderer {
     public void initGL() {
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
-        gluPerspective(45f, (float) Main.WIDTH / Main.HEIGHT, 0.1f, 80f);
+        gluPerspective(45f, (float) Main.WIDTH / Main.HEIGHT, 0.1f, 64f);
         glMatrixMode(GL_MODELVIEW);
 
         glEnable(GL_DEPTH_TEST);
@@ -32,6 +33,6 @@ public class WorldRenderer {
 
         camera.lookThrough();
 
-        world.chunkManager.renderChunks();
+        ChunkManager.getInstance().renderChunks();
     }
 }
