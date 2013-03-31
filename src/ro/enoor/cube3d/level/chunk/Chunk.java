@@ -20,12 +20,13 @@ public class Chunk {
     public OTree tree;
 
     public Chunk(int x, int z) {
-        chunkX = x;
-        chunkZ = z;
+        this.chunkX = x;
+        this.chunkZ = z;
         offsetX = x * SIZE;
         offsetZ = z * SIZE;
 
         blocks = new byte[SIZE][SIZE][SIZE];
+
         tree = new OTree(offsetX, 0, offsetZ, SIZE);
 
         generate();

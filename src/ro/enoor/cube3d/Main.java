@@ -34,8 +34,8 @@ public class Main {
     public void updateFPS() {
         if (getTime() - lastFPS > 1000) {
             Display.setTitle("FPS: " + fps);
-            fps = 0; //reset the FPS counter
-            lastFPS += 1000; //add one second
+            fps = 0;
+            lastFPS += 1000;
         }
         fps++;
     }

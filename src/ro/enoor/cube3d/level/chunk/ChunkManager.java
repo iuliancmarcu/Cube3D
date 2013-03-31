@@ -18,13 +18,21 @@ public class ChunkManager {
     }
 
     public void addChunk(int x, int z) {
-        Chunk chunk = new Chunk(x, z);
-        loadedChunks.add(chunk);
+        loadedChunks.add(new Chunk(x, z));
     }
 
     public void updateChunks() {
         for (Chunk chunk : loadedChunks)
             ChunkRenderer.generateVBO(chunk);
+    }
+
+    public int getBlockInWorld(int x, int y, int z) {
+        int chunkX = x / Chunk.SIZE;
+        int chunkZ = z / Chunk.SIZE;
+        x %= Chunk.SIZE;
+        z %= Chunk.SIZE;
+
+        return getBlockInChunk(x, y, z, chunkX, chunkZ);
     }
 
     public int getBlockInChunk(int x, int y, int z, int chunkX, int chunkZ) {

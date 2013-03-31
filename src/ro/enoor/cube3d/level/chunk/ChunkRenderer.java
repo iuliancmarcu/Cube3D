@@ -13,6 +13,8 @@ import static org.lwjgl.opengl.GL15.*;
 public abstract class ChunkRenderer {
     private static final int SIZE = Chunk.SIZE;
 
+    static ChunkManager manager = ChunkManager.getInstance();
+
     static int vertexCount = 0;
     static Chunk usedChunk;
     static FloatBuffer positionBuffer;
@@ -23,8 +25,8 @@ public abstract class ChunkRenderer {
 
         usedChunk = chunk;
 
-        positionBuffer = BufferUtils.createFloatBuffer(SIZE * SIZE * SIZE * 6 * 4);
-        colorBuffer = BufferUtils.createFloatBuffer(SIZE * SIZE * SIZE * 6 * 4);
+        positionBuffer = BufferUtils.createFloatBuffer(SIZE * SIZE * SIZE * 6 * 4 * 3);
+        colorBuffer = BufferUtils.createFloatBuffer(SIZE * SIZE * SIZE * 6 * 4 * 3);
 
         generateOctreeVBO(chunk.tree);
 
@@ -56,44 +58,44 @@ public abstract class ChunkRenderer {
             if (tree.breakTree()) {
                 for (int i = 0; i < 8; i++)
                     generateOctreeVBO(tree.children[i]);
-            } else if (usedChunk.getBlock(tree.x, tree.y, tree.z) != BlockType.AIR.id) {
+            } else if (manager.getBlockInWorld(tree.x, tree.y, tree.z) != BlockType.AIR.id) {
                 generateBlockVBO(tree.x, tree.y, tree.z);
             }
         }
     }
 
     private static void generateBlockVBO(int x, int y, int z) {
-        if (usedChunk.getBlock(x, y, z + 1) == BlockType.AIR.id) {
+        if (manager.getBlockInWorld(x, y, z + 1) == BlockType.AIR.id) {
             positionBuffer.put(new float[]{x, y, z + 1f, x + 1f, y, z + 1f, x + 1f, y + 1f, z + 1f, x, y + 1f, z + 1f});
             colorBuffer.put(new float[]{1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0});
             vertexCount += 4;
         }
 
-        if (usedChunk.getBlock(x, y, z - 1) == BlockType.AIR.id) {
+        if (manager.getBlockInWorld(x, y, z - 1) == BlockType.AIR.id) {
             positionBuffer.put(new float[]{x + 1f, y, z, x, y, z, x, y + 1f, z, x + 1f, y + 1f, z});
             colorBuffer.put(new float[]{1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0});
             vertexCount += 4;
         }
 
-        if (usedChunk.getBlock(x - 1, y, z) == BlockType.AIR.id) {
+        if (manager.getBlockInWorld(x - 1, y, z) == BlockType.AIR.id) {
             positionBuffer.put(new float[]{x, y, z, x, y, z + 1f, x, y + 1f, z + 1f, x, y + 1f, z});
             colorBuffer.put(new float[]{0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0});
             vertexCount += 4;
         }
 
-        if (usedChunk.getBlock(x + 1, y, z) == BlockType.AIR.id) {
+        if (manager.getBlockInWorld(x + 1, y, z) == BlockType.AIR.id) {
             positionBuffer.put(new float[]{x + 1f, y, z + 1f, x + 1f, y, z, x + 1f, y + 1f, z, x + 1f, y + 1f, z + 1f});
             colorBuffer.put(new float[]{0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0});
             vertexCount += 4;
         }
 
-        if (usedChunk.getBlock(x, y + 1, z) == BlockType.AIR.id) {
+        if (manager.getBlockInWorld(x, y + 1, z) == BlockType.AIR.id) {
             positionBuffer.put(new float[]{x, y + 1f, z + 1f, x + 1f, y + 1f, z + 1f, x + 1f, y + 1f, z, x, y + 1f, z});
             colorBuffer.put(new float[]{0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1});
             vertexCount += 4;
         }
 
-        if (usedChunk.getBlock(x, y - 1, z) == BlockType.AIR.id) {
+        if (manager.getBlockInWorld(x, y - 1, z) == BlockType.AIR.id) {
             positionBuffer.put(new float[]{x, y, z, x + 1f, y, z, x + 1f, y, z + 1f, x, y, z + 1f});
             colorBuffer.put(new float[]{0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1});
             vertexCount += 4;
