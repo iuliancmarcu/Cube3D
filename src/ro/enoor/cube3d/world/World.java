@@ -3,19 +3,16 @@ package ro.enoor.cube3d.world;
 import ro.enoor.cube3d.level.chunk.ChunkManager;
 
 public class World {
-    public ChunkManager chunkManager = ChunkManager.getInstance();
+    public ChunkManager manager = ChunkManager.getInstance();
 
     public World() {
-        for (int i = 0; i < 1; i++)
-            for (int j = 0; j < 1; j++)
-                chunkManager.addChunk(i, 0, j);
-        chunkManager.updateChunks();
+        for (int x = 0; x < 10; x++)
+            for (int y = 0; y < 10; y++)
+                for (int z = 0; z < 10; z++)
+                    manager.addChunk(x, y, z);
     }
 
     public void update(int delta) {
-        /*if (Camera.getInstance().moved) {
-            chunkManager.updateChunks();
-            Camera.getInstance().moved = false;
-        }*/
+        manager.updateChunks();
     }
 }

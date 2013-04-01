@@ -1,32 +1,20 @@
 package ro.enoor.cube3d.level.block;
 
-import org.newdawn.slick.opengl.TextureLoader;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+import ro.enoor.cube3d.util.TextureManager;
 
 public enum BlockType {
-    AIR(0, false, ""),
-    WOOD(1, true, "wood");
+    AIR(0, false, TextureManager.AIR),
+    STONE(1, true, TextureManager.STONE),
+    DIRT(2, true, TextureManager.DIRT),
+    GRASS(3, true, TextureManager.GRASS_TOP);
 
     public byte id;
-    public int textureID;
     public boolean solid;
+    public float[] texCoords;
 
-    BlockType(int id, boolean solid, String textureName) {
+    BlockType(int id, boolean solid, int blockID) {
         this.id = (byte) id;
         this.solid = solid;
-
-        textureID = loadTexture(textureName);
-    }
-
-    private int loadTexture(String name) {
-        try {
-            return TextureLoader.getTexture("PNG", new FileInputStream(new File("res/textures/" + name + ".png"))).getTextureID();
-        } catch (IOException e) {
-        } finally {
-            return 0;
-        }
+        this.texCoords = TextureManager.getTexCoord(blockID);
     }
 }

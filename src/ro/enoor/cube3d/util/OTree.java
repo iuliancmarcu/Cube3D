@@ -1,4 +1,4 @@
-package ro.enoor.cube3d.level.octree;
+package ro.enoor.cube3d.util;
 
 public class OTree {
     public int x, y, z, size;

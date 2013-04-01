@@ -1,7 +1,11 @@
 package ro.enoor.cube3d.level.chunk;
 
+import ro.enoor.cube3d.world.rendering.Camera;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.lwjgl.opengl.GL15.glDeleteBuffers;
 
 public class ChunkManager {
     private static ChunkManager instance = new ChunkManager();
@@ -10,20 +14,42 @@ public class ChunkManager {
         return instance;
     }
 
+    public ChunkRenderer chunkRenderer = new ChunkRenderer();
+    public ChunkUpdater chunkUpdater = new ChunkUpdater();
+
     public List<Chunk> loadedChunks = new ArrayList<Chunk>();
+    public List<Chunk> visibleChunks = new ArrayList<Chunk>();
+
+    /**
+     * Generates VBOs for new visible chunks and removes the chunks that are not visible.
+     */
+    public void updateChunks() {
+        for (Chunk chunk : loadedChunks) {
+            int chunkIndex = visibleChunks.indexOf(chunk);
+            if (Camera.getInstance().frustum.cubeInFrustum(chunk.offsetX, chunk.offsetY, chunk.offsetZ, Chunk.SIZE)) {
+                if (chunkIndex == -1) {
+                    chunkUpdater.generateVBO(chunk);
+                    visibleChunks.add(chunk);
+                }
+            } else {
+                if (chunkIndex != -1) {
+                    glDeleteBuffers(chunk.vboPositionHandle);
+                    glDeleteBuffers(chunk.vboTexCoordHandle);
+                    chunk.vboPositionHandle = 0;
+                    chunk.vboTexCoordHandle = 0;
+                    visibleChunks.remove(chunkIndex);
+                }
+            }
+        }
+    }
 
     public void renderChunks() {
-        for (Chunk chunk : loadedChunks)
-            ChunkRenderer.render(chunk);
+        for (Chunk chunk : visibleChunks)
+            chunkRenderer.render(chunk);
     }
 
     public void addChunk(int x, int y, int z) {
         loadedChunks.add(new Chunk(x, y, z));
-    }
-
-    public void updateChunks() {
-        for (Chunk chunk : loadedChunks)
-            ChunkRenderer.generateVBO(chunk);
     }
 
     public int getBlockInWorld(int x, int y, int z) {

@@ -6,6 +6,7 @@ import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
+import ro.enoor.cube3d.util.TextureManager;
 import ro.enoor.cube3d.world.World;
 import ro.enoor.cube3d.world.WorldRenderer;
 
@@ -59,10 +60,12 @@ public class Main {
         lastFrame = getTime();
         lastFPS = getTime();
 
+        TextureManager.loadTextures();
+
         while (!Display.isCloseRequested() && !Keyboard.isKeyDown(Keyboard.KEY_ESCAPE)) {
             input();
-            renderer.render();
             world.update(getDelta());
+            renderer.render();
 
             updateFPS();
 
@@ -78,22 +81,22 @@ public class Main {
         renderer.camera.pitch(-Mouse.getDY() * 0.05f);
 
         if (Keyboard.isKeyDown(Keyboard.KEY_W))
-            renderer.camera.walkForward(0.2f);
+            renderer.camera.walkForward(0.5f);
 
         if (Keyboard.isKeyDown(Keyboard.KEY_S))
-            renderer.camera.walkBackwards(0.2f);
+            renderer.camera.walkBackwards(0.5f);
 
         if (Keyboard.isKeyDown(Keyboard.KEY_A))
-            renderer.camera.walkLeft(0.2f);
+            renderer.camera.walkLeft(0.5f);
 
         if (Keyboard.isKeyDown(Keyboard.KEY_D))
-            renderer.camera.walkRight(0.2f);
+            renderer.camera.walkRight(0.5f);
 
         if (Keyboard.isKeyDown(Keyboard.KEY_SPACE))
-            renderer.camera.ascend(0.25f);
+            renderer.camera.ascend(0.5f);
 
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
-            renderer.camera.descend(0.2f);
+            renderer.camera.descend(0.5f);
     }
 
     public static void main(String[] args) {

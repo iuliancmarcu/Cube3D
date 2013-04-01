@@ -10,7 +10,7 @@ public class Chunk {
     public int offsetX, offsetY, offsetZ;
 
     public int vboPositionHandle;
-    public int vboColorHandle;
+    public int vboTexCoordHandle;
     public int vertexCount;
 
     /**
@@ -36,7 +36,7 @@ public class Chunk {
             for (int y = 0; y < SIZE; y++)
                 for (int z = 0; z < SIZE; z++) {
                     if (x % 2 == 0 ^ y % 2 == 0 ^ z % 2 == 0) {
-                        blocks[x][y][z] = BlockType.WOOD.id;
+                        blocks[x][y][z] = BlockType.STONE.id;
                     }
                 }
     }
