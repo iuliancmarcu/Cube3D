@@ -90,7 +90,7 @@ public class Camera {
         glRotatef(yaw, 0.0f, 1.0f, 0.0f);
         glTranslatef(position.x, -position.y, position.z);
 
-//        frustum.calculateFrustum();
+        frustum.calculateFrustum();
     }
 
     public String toString() {

@@ -1,8 +1,6 @@
 package ro.enoor.cube3d.level.chunk;
 
-import ro.enoor.cube3d.level.block.BlockType;
-
-import java.util.Random;
+import ro.enoor.cube3d.level.block.Block;
 
 public class Chunk {
     public static final int SIZE = 16;
@@ -34,15 +32,10 @@ public class Chunk {
     }
 
     private void generate() {
-        Random random = new Random();
-
         for (int x = 0; x < SIZE; x++)
             for (int y = 0; y < SIZE; y++)
-                for (int z = 0; z < SIZE; z++) {
-                    if (x % 2 == 0 ^ y % 2 == 0 ^ z % 2 == 0)
-                        blocks[x][y][z] = BlockType.GRASS.id;
-                    else blocks[x][y][z] = BlockType.DIRT.id;
-                }
+                for (int z = 0; z < SIZE; z++)
+                    blocks[x][y][z] = Block.GRASS.id;
     }
 
     public int getBlock(int x, int y, int z) {
