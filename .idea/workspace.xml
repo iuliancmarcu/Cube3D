@@ -5,17 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4421f674-d1c6-4105-bb8f-1aa9c33457db" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/block/BlockType.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/block/BlockType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Camera.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Camera.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/Chunk.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/Chunk.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkManager.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkRenderer.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkUpdater.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkUpdater.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/Main.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/util/TextureManager.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/util/TextureManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/World.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/World.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/WorldRenderer.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/WorldRenderer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Cube3D.iws" />
@@ -50,7 +39,7 @@
     <file path="/Octree.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364633410742" ignored="false" />
     <file path="/OTree.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364716766204" ignored="false" />
     <file path="/OTreeNode.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364637586297" ignored="false" />
-    <file path="/Dummy.txt" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364887177588" ignored="false" />
+    <file path="/Dummy.txt" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364893090506" ignored="false" />
     <file path="/OTreeChild.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364668835610" ignored="false" />
     <file path="/OTreeElement.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364669330895" ignored="false" />
     <file path="/OTreeRectangle.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364669406692" ignored="false" />
@@ -135,7 +124,7 @@
       <file leaf-file-name="WorldRenderer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/WorldRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="30" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.74005306">
+            <state line="44" column="30" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.79036826">
               <folding />
             </state>
           </provider>
@@ -144,7 +133,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="55" selection-start="2676" selection-end="2676" vertical-scroll-proportion="0.0">
+            <state line="101" column="55" selection-start="2677" selection-end="2677" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,8 +142,10 @@
       <file leaf-file-name="Camera.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Camera.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="5" selection-start="2257" selection-end="2257" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="93" column="5" selection-start="2337" selection-end="2337" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -162,7 +153,7 @@
       <file leaf-file-name="ChunkRenderer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="33" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
+            <state line="23" column="33" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -171,7 +162,7 @@
       <file leaf-file-name="ChunkUpdater.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkUpdater.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="68" selection-start="1603" selection-end="1603" vertical-scroll-proportion="0.0">
+            <state line="46" column="68" selection-start="1610" selection-end="1610" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -180,8 +171,10 @@
       <file leaf-file-name="ChunkManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="47" selection-start="1692" selection-end="1692" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="48" column="47" selection-start="1638" selection-end="1638" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -698,7 +691,11 @@
       <created>1364838552359</created>
       <updated>1364838552359</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="More and more optimization on chunk rendering system.">
+      <created>1364893103104</created>
+      <updated>1364893103104</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -723,9 +720,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.4939394" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32998326" sideWeight="0.4939394" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.71859294" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.71859294" order="5" side_tool="false" content_ui="tabs" />
@@ -735,11 +732,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20378788" sideWeight="0.25460637" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20378788" sideWeight="0.239531" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.71859294" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20378788" sideWeight="0.4438861" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28978226" sideWeight="0.4878788" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20378788" sideWeight="0.41876048" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28978226" sideWeight="0.4878788" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="554" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -786,7 +783,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Redid the Frustum Culling and VBO updating stuff." />
+    <option name="LAST_COMMIT_MESSAGE" value="More and more optimization on chunk rendering system." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -804,6 +801,7 @@
     <MESSAGE value="Added posibility to stack Chunks over Y axis." />
     <MESSAGE value="Added possibility to stack Chunks over Y axis." />
     <MESSAGE value="Redid the Frustum Culling and VBO updating stuff." />
+    <MESSAGE value="More and more optimization on chunk rendering system." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -860,7 +858,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="33" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
+        <state line="23" column="33" selection-start="800" selection-end="800" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -883,28 +881,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="47" selection-start="1692" selection-end="1692" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="48" column="47" selection-start="1638" selection-end="1638" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="55" selection-start="2676" selection-end="2676" vertical-scroll-proportion="0.0">
+        <state line="101" column="55" selection-start="2677" selection-end="2677" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Camera.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="5" selection-start="2257" selection-end="2257" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="93" column="5" selection-start="2337" selection-end="2337" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkUpdater.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="68" selection-start="1603" selection-end="1603" vertical-scroll-proportion="0.0">
+        <state line="46" column="68" selection-start="1610" selection-end="1610" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -920,7 +922,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/WorldRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="30" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.74005306">
+        <state line="44" column="30" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.79036826">
           <folding />
         </state>
       </provider>
