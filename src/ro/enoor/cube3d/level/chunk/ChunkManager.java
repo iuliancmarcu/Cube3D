@@ -5,8 +5,6 @@ import ro.enoor.cube3d.world.rendering.Camera;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.lwjgl.opengl.GL15.glDeleteBuffers;
-
 public class ChunkManager {
     private static ChunkManager instance = new ChunkManager();
 
@@ -28,15 +26,15 @@ public class ChunkManager {
             int chunkIndex = visibleChunks.indexOf(chunk);
             if (Camera.getInstance().frustum.cubeInFrustum(chunk.offsetX, chunk.offsetY, chunk.offsetZ, Chunk.SIZE)) {
                 if (chunkIndex == -1) {
-                    chunkUpdater.generateVBO(chunk);
+//                    chunkUpdater.generateVBO(chunk);
                     visibleChunks.add(chunk);
                 }
             } else {
                 if (chunkIndex != -1) {
-                    glDeleteBuffers(chunk.vboPositionHandle);
-                    glDeleteBuffers(chunk.vboTexCoordHandle);
-                    chunk.vboPositionHandle = 0;
-                    chunk.vboTexCoordHandle = 0;
+//                    glDeleteBuffers(chunk.vboPositionHandle);
+//                    glDeleteBuffers(chunk.vboTextureHandle);
+//                    chunk.vboPositionHandle = 0;
+//                    chunk.vboTextureHandle = 0;
                     visibleChunks.remove(chunkIndex);
                 }
             }

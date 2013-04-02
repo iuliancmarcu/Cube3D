@@ -2,6 +2,8 @@ package ro.enoor.cube3d.level.chunk;
 
 import ro.enoor.cube3d.level.block.BlockType;
 
+import java.util.Random;
+
 public class Chunk {
     public static final int SIZE = 16;
     public byte[][][] blocks;
@@ -10,7 +12,7 @@ public class Chunk {
     public int offsetX, offsetY, offsetZ;
 
     public int vboPositionHandle;
-    public int vboTexCoordHandle;
+    public int vboTextureHandle;
     public int vertexCount;
 
     /**
@@ -32,25 +34,24 @@ public class Chunk {
     }
 
     private void generate() {
+        Random random = new Random();
+
         for (int x = 0; x < SIZE; x++)
             for (int y = 0; y < SIZE; y++)
                 for (int z = 0; z < SIZE; z++) {
-                    if (x % 2 == 0 ^ y % 2 == 0 ^ z % 2 == 0) {
-                        blocks[x][y][z] = BlockType.STONE.id;
-                    }
+                    if (x % 2 == 0 ^ y % 2 == 0 ^ z % 2 == 0)
+                        blocks[x][y][z] = BlockType.GRASS.id;
+                    else blocks[x][y][z] = BlockType.DIRT.id;
                 }
     }
 
     public int getBlock(int x, int y, int z) {
         if (x < 0) return ChunkManager.getInstance().getBlockInChunk(x + SIZE, y, z, chunkX - 1, chunkY, chunkZ);
-        else if (x >= SIZE)
-            return ChunkManager.getInstance().getBlockInChunk(x - SIZE, y, z, chunkX + 1, chunkY, chunkZ);
+        else if (x >= SIZE) return ChunkManager.getInstance().getBlockInChunk(x - SIZE, y, z, chunkX + 1, chunkY, chunkZ);
         else if (z < 0) return ChunkManager.getInstance().getBlockInChunk(x, y, z + SIZE, chunkX, chunkY, chunkZ - 1);
-        else if (z >= SIZE)
-            return ChunkManager.getInstance().getBlockInChunk(x, y, z - SIZE, chunkX, chunkY, chunkZ + 1);
+        else if (z >= SIZE) return ChunkManager.getInstance().getBlockInChunk(x, y, z - SIZE, chunkX, chunkY, chunkZ + 1);
         else if (y < 0) return ChunkManager.getInstance().getBlockInChunk(x, y + SIZE, z, chunkX, chunkY - 1, chunkZ);
-        else if (y >= SIZE)
-            return ChunkManager.getInstance().getBlockInChunk(x, y - SIZE, z, chunkX, chunkY + 1, chunkZ);
+        else if (y >= SIZE) return ChunkManager.getInstance().getBlockInChunk(x, y - SIZE, z, chunkX, chunkY + 1, chunkZ);
 
         return blocks[x][y][z];
     }

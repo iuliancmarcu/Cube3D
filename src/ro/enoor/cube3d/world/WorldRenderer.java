@@ -25,7 +25,7 @@ public class WorldRenderer {
     public void initGL() {
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
-        gluPerspective(45f, (float) Main.WIDTH / Main.HEIGHT, 0.1f, 32f);
+        gluPerspective(45f, (float) Main.WIDTH / Main.HEIGHT, 0.1f, 128f);
         glMatrixMode(GL_MODELVIEW);
 
         glEnable(GL_DEPTH_TEST);
@@ -41,8 +41,8 @@ public class WorldRenderer {
         glFog(GL_FOG_COLOR, fogColor);
         glFogf(GL_FOG_DENSITY, 0.35f);
         glHint(GL_FOG_HINT, GL_DONT_CARE);
-        glFogf(GL_FOG_START, 16f);
-        glFogf(GL_FOG_END, 32f);
+        glFogf(GL_FOG_START, 64f);
+        glFogf(GL_FOG_END, 128f);
 
         glClearColor(0.5f, 0.5f, 1.0f, 1.0f);
     }

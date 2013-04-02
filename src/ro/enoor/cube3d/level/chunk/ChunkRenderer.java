@@ -15,13 +15,13 @@ public class ChunkRenderer {
         glVertexPointer(3, GL_FLOAT, 0, 0L);
         glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-        glBindBuffer(GL_ARRAY_BUFFER, chunk.vboTexCoordHandle);
+        glBindBuffer(GL_ARRAY_BUFFER, chunk.vboTextureHandle);
         glTexCoordPointer(2, GL_FLOAT, 0, 0L);
         glBindBuffer(GL_ARRAY_BUFFER, 0);
 
         glEnableClientState(GL_VERTEX_ARRAY);
         glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-        glDrawArrays(GL_QUADS, 0, chunk.vertexCount);
+        glDrawArrays(GL_TRIANGLES, 0, chunk.vertexCount);
         glDisableClientState(GL_VERTEX_ARRAY);
         glDisableClientState(GL_TEXTURE_COORD_ARRAY);
     }

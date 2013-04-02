@@ -14,6 +14,7 @@ public abstract class TextureManager {
     public static int STONE = 1;
     public static int DIRT = 2;
     public static int GRASS_SIDE = 3;
+    public static int WOOD = 4;
     public static int AIR = 253;
 
     public static void loadTextures() {
@@ -24,13 +25,16 @@ public abstract class TextureManager {
         }
     }
 
-    public static float[] getTexCoord(int blockID) {
+    public static float[] getTexCoordinates(int blockID) {
         int blockX = blockID % 16;
         int blockY = blockID / 16;
 
         return new float[]{
                 1f / 16f * blockX, 1f / 16f * blockY,
                 1f / 16f * blockX + 1f / 16f, 1f / 16f * blockY,
+                1f / 16f * blockX + 1f / 16f, 1f / 16f * blockY + 1f / 16f,
+
+                1f / 16f * blockX, 1f / 16f * blockY,
                 1f / 16f * blockX + 1f / 16f, 1f / 16f * blockY + 1f / 16f,
                 1f / 16f * blockX, 1f / 16f * blockY + 1f / 16f
         };

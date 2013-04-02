@@ -21,11 +21,13 @@ public class ChunkUpdater {
      * @param chunk Chunk that should be calculated.
      */
     public void generateVBO(Chunk chunk) {
+//        System.out.println("Chunk at x: " + chunk.offsetX + " y: " + chunk.offsetY + " z: " + chunk.offsetZ + " has been updated.");
+
         vertexCount = 0;
         usedChunk = chunk;
 
-        positionBuffer = BufferUtils.createFloatBuffer(SIZE * SIZE * SIZE * 6 * 4 * 3 / 2);
-        textureBuffer = BufferUtils.createFloatBuffer(SIZE * SIZE * SIZE * 6 * 4 * 2 / 2);
+        positionBuffer = BufferUtils.createFloatBuffer(SIZE * SIZE * SIZE * 6 * 6 * 3 / 2);
+        textureBuffer = BufferUtils.createFloatBuffer(SIZE * SIZE * SIZE * 6 * 6 * 2 / 2);
         generateChunkVBO(chunk);
         positionBuffer.flip();
         textureBuffer.flip();
@@ -33,16 +35,16 @@ public class ChunkUpdater {
         chunk.vertexCount = vertexCount;
 
         glDeleteBuffers(chunk.vboPositionHandle);
-        glDeleteBuffers(chunk.vboTexCoordHandle);
+        glDeleteBuffers(chunk.vboTextureHandle);
 
         chunk.vboPositionHandle = glGenBuffers();
         glBindBuffer(GL_ARRAY_BUFFER, chunk.vboPositionHandle);
-        glBufferData(GL_ARRAY_BUFFER, positionBuffer, GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, positionBuffer, GL_DYNAMIC_DRAW);
         glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-        chunk.vboTexCoordHandle = glGenBuffers();
-        glBindBuffer(GL_ARRAY_BUFFER, chunk.vboTexCoordHandle);
-        glBufferData(GL_ARRAY_BUFFER, textureBuffer, GL_STATIC_DRAW);
+        chunk.vboTextureHandle = glGenBuffers();
+        glBindBuffer(GL_ARRAY_BUFFER, chunk.vboTextureHandle);
+        glBufferData(GL_ARRAY_BUFFER, textureBuffer, GL_DYNAMIC_DRAW);
         glBindBuffer(GL_ARRAY_BUFFER, 0);
 
         usedChunk = null;
@@ -75,40 +77,94 @@ public class ChunkUpdater {
                 break;
             }
 
+        // FRONT face
         if (manager.getBlockInWorld(x, y, z + 1) == BlockType.AIR.id) {
-            positionBuffer.put(new float[]{x, y, z + 1f, x + 1f, y, z + 1f, x + 1f, y + 1f, z + 1f, x, y + 1f, z + 1f});
+            positionBuffer.put(new float[]{
+                    x, y, z + 1f,
+                    x + 1f, y, z + 1f,
+                    x + 1f, y + 1f, z + 1f,
+
+                    x, y, z + 1f,
+                    x + 1f, y + 1f, z + 1f,
+                    x, y + 1f, z + 1f
+            });
             textureBuffer.put(blockType.texCoords);
-            vertexCount += 4;
+            vertexCount += 6;
         }
 
+        // BACK face
         if (manager.getBlockInWorld(x, y, z - 1) == BlockType.AIR.id) {
-            positionBuffer.put(new float[]{x + 1f, y, z, x, y, z, x, y + 1f, z, x + 1f, y + 1f, z});
+            positionBuffer.put(new float[]{
+                    x + 1f, y, z,
+                    x, y, z,
+                    x, y + 1f, z,
+
+                    x + 1f, y, z,
+                    x, y + 1f, z,
+                    x + 1f, y + 1f, z
+            });
             textureBuffer.put(blockType.texCoords);
-            vertexCount += 4;
+            vertexCount += 6;
         }
 
+        // LEFT face
         if (manager.getBlockInWorld(x - 1, y, z) == BlockType.AIR.id) {
-            positionBuffer.put(new float[]{x, y, z, x, y, z + 1f, x, y + 1f, z + 1f, x, y + 1f, z});
+            positionBuffer.put(new float[]{
+                    x, y, z,
+                    x, y, z + 1f,
+                    x, y + 1f, z + 1f,
+
+                    x, y, z,
+                    x, y + 1f, z + 1f,
+                    x, y + 1f, z
+            });
             textureBuffer.put(blockType.texCoords);
-            vertexCount += 4;
+            vertexCount += 6;
         }
 
+        // RIGHT face
         if (manager.getBlockInWorld(x + 1, y, z) == BlockType.AIR.id) {
-            positionBuffer.put(new float[]{x + 1f, y, z + 1f, x + 1f, y, z, x + 1f, y + 1f, z, x + 1f, y + 1f, z + 1f});
+            positionBuffer.put(new float[]{
+                    x + 1f, y, z + 1f,
+                    x + 1f, y, z,
+                    x + 1f, y + 1f, z,
+
+                    x + 1f, y, z + 1f,
+                    x + 1f, y + 1f, z,
+                    x + 1f, y + 1f, z + 1f
+            });
             textureBuffer.put(blockType.texCoords);
-            vertexCount += 4;
+            vertexCount += 6;
         }
 
+        // TOP face
         if (manager.getBlockInWorld(x, y + 1, z) == BlockType.AIR.id) {
-            positionBuffer.put(new float[]{x, y + 1f, z + 1f, x + 1f, y + 1f, z + 1f, x + 1f, y + 1f, z, x, y + 1f, z});
+            positionBuffer.put(new float[]{
+                    x, y + 1f, z + 1f,
+                    x + 1f, y + 1f, z + 1f,
+                    x + 1f, y + 1f, z,
+
+                    x, y + 1f, z + 1f,
+                    x + 1f, y + 1f, z,
+                    x, y + 1f, z
+            });
             textureBuffer.put(blockType.texCoords);
-            vertexCount += 4;
+            vertexCount += 6;
         }
 
+        // BOTTOM face
         if (manager.getBlockInWorld(x, y - 1, z) == BlockType.AIR.id) {
-            positionBuffer.put(new float[]{x, y, z, x + 1f, y, z, x + 1f, y, z + 1f, x, y, z + 1f});
+            positionBuffer.put(new float[]{
+                    x, y, z,
+                    x + 1f, y, z,
+                    x + 1f, y, z + 1f,
+
+                    x, y, z,
+                    x + 1f, y, z + 1f,
+                    x, y, z + 1f
+            });
             textureBuffer.put(blockType.texCoords);
-            vertexCount += 4;
+            vertexCount += 6;
         }
     }
 }

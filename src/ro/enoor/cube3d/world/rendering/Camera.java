@@ -2,7 +2,8 @@ package ro.enoor.cube3d.world.rendering;
 
 import org.lwjgl.util.vector.Vector3f;
 
-import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.opengl.GL11.glRotatef;
+import static org.lwjgl.opengl.GL11.glTranslatef;
 
 public class Camera {
     private static Camera instance = new Camera();
@@ -25,51 +26,51 @@ public class Camera {
     }
 
     public void yaw(float rotX) {
-        if(Math.abs(rotX) > 0.01f)
+        if (Math.abs(rotX) > 0.01f)
             moved = true;
 
         yaw += rotX;
 
-        if(yaw > 180f) yaw = -180f;
-        else if(yaw < -180f) yaw = 180f;
+        if (yaw > 180f) yaw = -180f;
+        else if (yaw < -180f) yaw = 180f;
     }
 
     public void pitch(float rotY) {
-        if(Math.abs(rotY) > 0.01f)
+        if (Math.abs(rotY) > 0.01f)
             moved = true;
 
         pitch += rotY;
 
-        if(pitch > 90f) pitch = 90f;
-        else if(pitch < -90f) pitch = -90f;
+        if (pitch > 90f) pitch = 90f;
+        else if (pitch < -90f) pitch = -90f;
     }
 
     public void walkForward(float distance) {
         moved = true;
 
-        position.x -= distance * (float)Math.sin(Math.toRadians(yaw));
-        position.z += distance * (float)Math.cos(Math.toRadians(yaw));
+        position.x -= distance * (float) Math.sin(Math.toRadians(yaw));
+        position.z += distance * (float) Math.cos(Math.toRadians(yaw));
     }
 
     public void walkBackwards(float distance) {
         moved = true;
 
-        position.x += distance * (float)Math.sin(Math.toRadians(yaw));
-        position.z -= distance * (float)Math.cos(Math.toRadians(yaw));
+        position.x += distance * (float) Math.sin(Math.toRadians(yaw));
+        position.z -= distance * (float) Math.cos(Math.toRadians(yaw));
     }
 
     public void walkLeft(float distance) {
         moved = true;
 
-        position.x -= distance * (float)Math.sin(Math.toRadians(yaw-90));
-        position.z += distance * (float)Math.cos(Math.toRadians(yaw-90));
+        position.x -= distance * (float) Math.sin(Math.toRadians(yaw - 90));
+        position.z += distance * (float) Math.cos(Math.toRadians(yaw - 90));
     }
 
     public void walkRight(float distance) {
         moved = true;
 
-        position.x -= distance * (float)Math.sin(Math.toRadians(yaw+90));
-        position.z += distance * (float)Math.cos(Math.toRadians(yaw+90));
+        position.x -= distance * (float) Math.sin(Math.toRadians(yaw + 90));
+        position.z += distance * (float) Math.cos(Math.toRadians(yaw + 90));
     }
 
     public void ascend(float distance) {
@@ -89,7 +90,7 @@ public class Camera {
         glRotatef(yaw, 0.0f, 1.0f, 0.0f);
         glTranslatef(position.x, -position.y, position.z);
 
-        frustum.calculateFrustum();
+//        frustum.calculateFrustum();
     }
 
     public String toString() {

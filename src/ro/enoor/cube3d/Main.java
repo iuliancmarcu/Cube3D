@@ -97,6 +97,9 @@ public class Main {
 
         if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
             renderer.camera.descend(0.5f);
+
+        if (Keyboard.isKeyDown(Keyboard.KEY_R))
+            renderer.camera.frustum.calculateFrustum();
     }
 
     public static void main(String[] args) {
