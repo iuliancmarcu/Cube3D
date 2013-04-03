@@ -1,5 +1,7 @@
 package ro.enoor.cube3d.world.rendering;
 
+import org.lwjgl.input.Keyboard;
+import org.lwjgl.input.Mouse;
 import org.lwjgl.util.vector.Vector3f;
 
 import static org.lwjgl.opengl.GL11.glRotatef;
@@ -16,7 +18,6 @@ public class Camera {
     public Vector3f position;
     public float yaw;
     public float pitch;
-    public boolean moved;
 
     private Camera() {
         frustum = new Frustum();
@@ -25,70 +26,60 @@ public class Camera {
         pitch = 0f;
     }
 
-    public void yaw(float rotX) {
-        if (Math.abs(rotX) > 0.01f)
-            moved = true;
-
-        yaw += rotX;
-
-        if (yaw > 180f) yaw = -180f;
-        else if (yaw < -180f) yaw = 180f;
+    public void processInput() {
+        processMouse();
+        processKeyboard();
     }
 
-    public void pitch(float rotY) {
-        if (Math.abs(rotY) > 0.01f)
-            moved = true;
+    private void processMouse() {
+        float moveX = Mouse.getDX();
+        float moveY = -Mouse.getDY();
 
-        pitch += rotY;
+        yaw += moveX * 0.05f;
+        if (yaw > 360f) yaw = 0f;
+        else if (yaw < 0f) yaw = 360f;
 
+        pitch += moveY * 0.05f;
         if (pitch > 90f) pitch = 90f;
         else if (pitch < -90f) pitch = -90f;
     }
 
-    public void walkForward(float distance) {
-        moved = true;
+    private void processKeyboard() {
+        boolean upPressed = Keyboard.isKeyDown(Keyboard.KEY_W) || Keyboard.isKeyDown(Keyboard.KEY_UP);
+        boolean downPressed = Keyboard.isKeyDown(Keyboard.KEY_S) || Keyboard.isKeyDown(Keyboard.KEY_DOWN);
+        boolean leftPressed = Keyboard.isKeyDown(Keyboard.KEY_A) || Keyboard.isKeyDown(Keyboard.KEY_LEFT);
+        boolean rightPressed = Keyboard.isKeyDown(Keyboard.KEY_D) || Keyboard.isKeyDown(Keyboard.KEY_RIGHT);
+        boolean jumpPressed = Keyboard.isKeyDown(Keyboard.KEY_SPACE);
+        boolean duckPressed = Keyboard.isKeyDown(Keyboard.KEY_LSHIFT);
 
-        position.x -= distance * (float) Math.sin(Math.toRadians(yaw));
-        position.z += distance * (float) Math.cos(Math.toRadians(yaw));
-    }
-
-    public void walkBackwards(float distance) {
-        moved = true;
-
-        position.x += distance * (float) Math.sin(Math.toRadians(yaw));
-        position.z -= distance * (float) Math.cos(Math.toRadians(yaw));
-    }
-
-    public void walkLeft(float distance) {
-        moved = true;
-
-        position.x -= distance * (float) Math.sin(Math.toRadians(yaw - 90));
-        position.z += distance * (float) Math.cos(Math.toRadians(yaw - 90));
-    }
-
-    public void walkRight(float distance) {
-        moved = true;
-
-        position.x -= distance * (float) Math.sin(Math.toRadians(yaw + 90));
-        position.z += distance * (float) Math.cos(Math.toRadians(yaw + 90));
-    }
-
-    public void ascend(float distance) {
-        moved = true;
-
-        position.y += distance;
-    }
-
-    public void descend(float distance) {
-        moved = true;
-
-        position.y -= distance;
+        if (upPressed) {
+            position.x += 0.5f * Math.sin(Math.toRadians(yaw));
+            position.z -= 0.5f * Math.cos(Math.toRadians(yaw));
+        }
+        if (downPressed) {
+            position.x -= 0.5f * Math.sin(Math.toRadians(yaw));
+            position.z += 0.5f * Math.cos(Math.toRadians(yaw));
+        }
+        if (leftPressed) {
+            position.x += 0.5f * Math.sin(Math.toRadians(yaw - 90));
+            position.z -= 0.5f * Math.cos(Math.toRadians(yaw - 90));
+        }
+        if (rightPressed) {
+            position.x += 0.5f * Math.sin(Math.toRadians(yaw + 90));
+            position.z -= 0.5f * Math.cos(Math.toRadians(yaw + 90));
+        }
+        if (jumpPressed) {
+            position.y += 0.5f;
+        }
+        if (duckPressed) {
+            position.y -= 0.5f;
+        }
     }
 
     public void lookThrough() {
         glRotatef(pitch, 1.0f, 0.0f, 0.0f);
         glRotatef(yaw, 0.0f, 1.0f, 0.0f);
-        glTranslatef(position.x, -position.y, position.z);
+        glTranslatef(-position.x, -position.y, -position.z);
 
         frustum.calculateFrustum();
     }

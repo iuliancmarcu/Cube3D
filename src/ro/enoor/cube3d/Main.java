@@ -9,6 +9,7 @@ import org.lwjgl.opengl.DisplayMode;
 import ro.enoor.cube3d.util.TextureManager;
 import ro.enoor.cube3d.world.World;
 import ro.enoor.cube3d.world.WorldRenderer;
+import ro.enoor.cube3d.world.rendering.Camera;
 
 public class Main {
     public static final int WIDTH = 800;
@@ -34,7 +35,7 @@ public class Main {
 
     public void updateFPS() {
         if (getTime() - lastFPS > 1000) {
-            Display.setTitle("FPS: " + fps);
+//            Display.setTitle("FPS: " + fps);
             fps = 0;
             lastFPS += 1000;
         }
@@ -67,6 +68,7 @@ public class Main {
             world.update(getDelta());
             renderer.render();
 
+            Display.setTitle(Camera.getInstance().toString());
             updateFPS();
 
             Display.update();
@@ -77,29 +79,7 @@ public class Main {
     }
 
     private void input() {
-        renderer.camera.yaw(Mouse.getDX() * 0.05f);
-        renderer.camera.pitch(-Mouse.getDY() * 0.05f);
-
-        if (Keyboard.isKeyDown(Keyboard.KEY_W))
-            renderer.camera.walkForward(0.5f);
-
-        if (Keyboard.isKeyDown(Keyboard.KEY_S))
-            renderer.camera.walkBackwards(0.5f);
-
-        if (Keyboard.isKeyDown(Keyboard.KEY_A))
-            renderer.camera.walkLeft(0.5f);
-
-        if (Keyboard.isKeyDown(Keyboard.KEY_D))
-            renderer.camera.walkRight(0.5f);
-
-        if (Keyboard.isKeyDown(Keyboard.KEY_SPACE))
-            renderer.camera.ascend(0.5f);
-
-        if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
-            renderer.camera.descend(0.5f);
-
-        if (Keyboard.isKeyDown(Keyboard.KEY_R))
-            renderer.camera.frustum.calculateFrustum();
+        renderer.camera.processInput();
     }
 
     public static void main(String[] args) {

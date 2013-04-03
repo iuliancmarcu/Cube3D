@@ -14,8 +14,7 @@ public abstract class Block {
 
     public Block(int id) {
         this.id = (byte) id;
-        if (blocks[id] != null)
-            throw new RuntimeException("Block id duplication at id " + id);
+        if (blocks[id] != null) throw new InternalError("Block duplication at id " + id);
         blocks[id] = this;
         blockTexCoord = new float[6][12];
     }
