@@ -35,7 +35,7 @@ public class Chunk {
         for (int x = 0; x < SIZE; x++)
             for (int y = 0; y < SIZE; y++)
                 for (int z = 0; z < SIZE; z++)
-                    blocks[x][y][z] = Block.GRASS.id;
+                    blocks[x][y][z] = Block.STONE.id;
     }
 
     public int getBlock(int x, int y, int z) {

@@ -8,6 +8,8 @@ import static org.lwjgl.opengl.GL11.glRotatef;
 import static org.lwjgl.opengl.GL11.glTranslatef;
 
 public class Camera {
+    public static final int VIEW_RADIUS = 4;
+
     private static Camera instance = new Camera();
 
     public static Camera getInstance() {

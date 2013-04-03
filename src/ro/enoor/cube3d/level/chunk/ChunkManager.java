@@ -1,14 +1,11 @@
 package ro.enoor.cube3d.level.chunk;
 
-import ro.enoor.cube3d.world.WorldRenderer;
 import ro.enoor.cube3d.world.rendering.Camera;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ChunkManager {
-    private static final int VIEW_RADIUS = WorldRenderer.VIEW_RADIUS;
-
     private static ChunkManager instance = new ChunkManager();
 
     public static ChunkManager getInstance() {
@@ -22,9 +19,9 @@ public class ChunkManager {
     public List<Chunk> visibleChunks = new ArrayList<Chunk>();
 
     public void generateWorld() {
-        for (int x = 0; x < VIEW_RADIUS * 2; x++)
+        for (int x = 0; x < Camera.VIEW_RADIUS * 2; x++)
             for (int y = 0; y < 1; y++)
-                for (int z = 0; z < VIEW_RADIUS * 2; z++)
+                for (int z = 0; z < Camera.VIEW_RADIUS * 2; z++)
                     addChunk(x, y, z);
     }
 
