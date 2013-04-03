@@ -2,10 +2,10 @@ package ro.enoor.cube3d.world;
 
 import ro.enoor.cube3d.level.chunk.ChunkManager;
 
-public class World {
+public class Game {
     public ChunkManager manager = ChunkManager.getInstance();
 
-    public World() {
+    public Game() {
         manager.generateWorld();
 //
 //        for(int x = 0; x < VIEW_RADIUS * 2; x++)

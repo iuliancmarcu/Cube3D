@@ -1,9 +1,13 @@
 package ro.enoor.cube3d.level.chunk;
 
+import ro.enoor.cube3d.util.TextureManager;
 import ro.enoor.cube3d.world.rendering.Camera;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.lwjgl.opengl.GL11.GL_TEXTURE_2D;
+import static org.lwjgl.opengl.GL11.glBindTexture;
 
 public class ChunkManager {
     private static ChunkManager instance = new ChunkManager();
@@ -44,6 +48,7 @@ public class ChunkManager {
     }
 
     public void renderChunks() {
+        glBindTexture(GL_TEXTURE_2D, TextureManager.textureAtlasID);
         for (Chunk chunk : visibleChunks)
             chunkRenderer.render(chunk);
     }

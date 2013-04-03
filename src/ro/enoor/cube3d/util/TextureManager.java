@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public abstract class TextureManager {
+    public static int fontTextureID;
     public static int textureAtlasID;
 
     public static int GRASS_TOP = 0;
@@ -19,6 +20,7 @@ public abstract class TextureManager {
     public static void loadTextures() {
         try {
             textureAtlasID = TextureLoader.getTexture("PNG", new FileInputStream(new File("res/texturePack.png")), GL11.GL_NEAREST).getTextureID();
+            fontTextureID = TextureLoader.getTexture("PNG", new FileInputStream(new File("res/font.png")), GL11.GL_NEAREST).getTextureID();
         } catch (IOException e) {
             e.printStackTrace();
         }

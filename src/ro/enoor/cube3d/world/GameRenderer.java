@@ -5,6 +5,8 @@ import org.lwjgl.util.vector.Vector3f;
 import ro.enoor.cube3d.Main;
 import ro.enoor.cube3d.level.chunk.Chunk;
 import ro.enoor.cube3d.level.chunk.ChunkManager;
+import ro.enoor.cube3d.util.Font;
+import ro.enoor.cube3d.util.TextureManager;
 import ro.enoor.cube3d.world.rendering.Camera;
 
 import java.nio.FloatBuffer;
@@ -12,22 +14,24 @@ import java.nio.FloatBuffer;
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.util.glu.GLU.gluPerspective;
 
-public class WorldRenderer {
-    public World world;
+public class GameRenderer {
+    public Game game;
     public Camera camera = Camera.getInstance();
+    public boolean showDebug;
 
     private ChunkManager manager = ChunkManager.getInstance();
 
-    public WorldRenderer(World world) {
-        this.world = world;
+    public GameRenderer(Game game) {
+        this.game = game;
         camera.position = new Vector3f(0f, Chunk.SIZE * 2, 0f);
     }
 
-    public void initGL() {
+    public void setup3D() {
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
         gluPerspective(45f, (float) Main.WIDTH / Main.HEIGHT, 0.1f, Chunk.SIZE * Camera.VIEW_RADIUS);
         glMatrixMode(GL_MODELVIEW);
+        glLoadIdentity();
 
         glEnable(GL_DEPTH_TEST);
         glEnable(GL_CULL_FACE);
@@ -48,13 +52,34 @@ public class WorldRenderer {
         glClearColor(0.5f, 0.5f, 1.0f, 1.0f);
     }
 
-    public void render() {
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
+    private void setup2D() {
+        glMatrixMode(GL_PROJECTION);
+        glLoadIdentity();
+        glOrtho(0f, Main.WIDTH, 0f, Main.HEIGHT, -1f, 10f);
+        glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
 
-        camera.lookThrough();
+        glDisable(GL_DEPTH_TEST);
+        glDisable(GL_CULL_FACE);
+        glDisable(GL_FOG);
+    }
 
+    public void renderWorld() {
+        setup3D();
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        camera.lookThrough();
         manager.renderChunks();
+    }
+
+    public void renderInterface() {
+        setup2D();
+        Font.renderString(Camera.getInstance().toString(), TextureManager.fontTextureID, 0f, 0f, 32f, 32f);
+    }
+
+    public void render() {
+        renderWorld();
+        if (showDebug)
+            renderInterface();
     }
 }

@@ -7,16 +7,15 @@ import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import ro.enoor.cube3d.util.TextureManager;
-import ro.enoor.cube3d.world.World;
-import ro.enoor.cube3d.world.WorldRenderer;
-import ro.enoor.cube3d.world.rendering.Camera;
+import ro.enoor.cube3d.world.Game;
+import ro.enoor.cube3d.world.GameRenderer;
 
 public class Main {
     public static final int WIDTH = 800;
     public static final int HEIGHT = 600;
 
-    public World world;
-    public WorldRenderer renderer;
+    public Game game;
+    public GameRenderer renderer;
 
     private long lastFrame;
     private long lastFPS;
@@ -35,7 +34,7 @@ public class Main {
 
     public void updateFPS() {
         if (getTime() - lastFPS > 1000) {
-//            Display.setTitle("FPS: " + fps);
+            Display.setTitle("Cube3D (FPS: " + fps + ")");
             fps = 0;
             lastFPS += 1000;
         }
@@ -46,7 +45,6 @@ public class Main {
         try {
             Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
 
-            Display.setTitle("Cube3D");
             Display.create();
 
             Mouse.setGrabbed(true);
@@ -54,21 +52,19 @@ public class Main {
             e.printStackTrace();
         }
 
-        world = new World();
-        renderer = new WorldRenderer(world);
+        game = new Game();
+        renderer = new GameRenderer(game);
 
-        renderer.initGL();
         lastFrame = getTime();
         lastFPS = getTime();
 
         TextureManager.loadTextures();
 
         while (!Display.isCloseRequested() && !Keyboard.isKeyDown(Keyboard.KEY_ESCAPE)) {
-            input();
-            world.update(getDelta());
             renderer.render();
+            input();
+            game.update(getDelta());
 
-            Display.setTitle(Camera.getInstance().toString());
             updateFPS();
 
             Display.update();
@@ -80,6 +76,11 @@ public class Main {
 
     private void input() {
         renderer.camera.processInput();
+
+        while (Keyboard.next()) {
+            if (Keyboard.getEventKey() == Keyboard.KEY_Q)
+                renderer.showDebug ^= true;
+        }
     }
 
     public static void main(String[] args) {
