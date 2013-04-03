@@ -5,11 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4421f674-d1c6-4105-bb8f-1aa9c33457db" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/block/Block.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/block/Block.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Camera.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/rendering/Camera.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/Chunk.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/Chunk.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkManager.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/WorldRenderer.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/WorldRenderer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Cube3D.iws" />
@@ -44,7 +39,7 @@
     <file path="/Octree.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364633410742" ignored="false" />
     <file path="/OTree.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364716766204" ignored="false" />
     <file path="/OTreeNode.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364637586297" ignored="false" />
-    <file path="/Dummy.txt" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1365002687045" ignored="false" />
+    <file path="/Dummy.txt" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1365002976268" ignored="false" />
     <file path="/OTreeChild.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364668835610" ignored="false" />
     <file path="/OTreeElement.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364669330895" ignored="false" />
     <file path="/OTreeRectangle.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364669406692" ignored="false" />
@@ -738,7 +733,11 @@
       <created>1365002699082</created>
       <updated>1365002699082</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated the camera code.">
+      <created>1365002984930</created>
+      <updated>1365002984930</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
