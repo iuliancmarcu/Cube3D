@@ -4,15 +4,8 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4421f674-d1c6-4105-bb8f-1aa9c33457db" name="Default" comment="Added font support and &quot;debug&quot; information.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/font.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/util/Font.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkManager.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/level/chunk/ChunkManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/Main.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ro/enoor/cube3d/util/TextureManager.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/util/TextureManager.java" />
+    <list default="true" id="4421f674-d1c6-4105-bb8f-1aa9c33457db" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\Others\Java\Cube3D\src\ro\enoor\cube3d\world\World.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/Game.java" />
-      <change type="MOVED" beforePath="D:\Others\Java\Cube3D\src\ro\enoor\cube3d\world\WorldRenderer.java" afterPath="$PROJECT_DIR$/src/ro/enoor/cube3d/world/GameRenderer.java" />
     </list>
     <ignored path="Cube3D.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +39,7 @@
     <file path="/Octree.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364633410742" ignored="false" />
     <file path="/OTree.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364716766204" ignored="false" />
     <file path="/OTreeNode.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364637586297" ignored="false" />
-    <file path="/Dummy.txt" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1365009897466" ignored="false" />
+    <file path="/Dummy.txt" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1365053952861" ignored="false" />
     <file path="/OTreeChild.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364668835610" ignored="false" />
     <file path="/OTreeElement.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364669330895" ignored="false" />
     <file path="/OTreeRectangle.java" changelist="4421f674-d1c6-4105-bb8f-1aa9c33457db" time="1364669406692" ignored="false" />
@@ -82,6 +75,7 @@
   </component>
   <component name="DebuggerManager">
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -116,7 +110,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -174,7 +167,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="55" selection-start="983" selection-end="983" vertical-scroll-proportion="0.32352942">
+            <state line="36" column="55" selection-start="983" selection-end="983" vertical-scroll-proportion="0.029668411">
               <folding />
             </state>
           </provider>
@@ -290,7 +283,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -466,19 +458,20 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="136" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="154" />
-    <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="154" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="158" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="C:/Program Files (x86)/Git/cmd/git.exe" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="160" />
@@ -492,8 +485,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -501,8 +494,8 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -558,19 +551,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -596,6 +576,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -714,7 +707,11 @@
       <created>1365003004924</created>
       <updated>1365003004924</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added font support and &quot;debug&quot; information.">
+      <created>1365009922719</created>
+      <updated>1365009922719</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -739,7 +736,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.4939394" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.71859294" order="2" side_tool="false" content_ui="tabs" />
@@ -749,7 +746,6 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28308207" sideWeight="0.5068182" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19015151" sideWeight="0.34338358" order="0" side_tool="true" content_ui="tabs" x="651" y="335" width="251" height="199" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32998326" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19015151" sideWeight="0.32663316" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.71859294" order="1" side_tool="false" content_ui="tabs" />
@@ -760,6 +756,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32663316" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32998326" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.67363346" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
@@ -875,9 +872,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="73" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.4874552">
-          <folding />
-        </state>
+        <state line="16" column="73" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.4874552" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/world/Game.java">
@@ -967,7 +962,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ro/enoor/cube3d/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="55" selection-start="983" selection-end="983" vertical-scroll-proportion="0.32352942">
+        <state line="36" column="55" selection-start="983" selection-end="983" vertical-scroll-proportion="0.029668411">
           <folding />
         </state>
       </provider>
