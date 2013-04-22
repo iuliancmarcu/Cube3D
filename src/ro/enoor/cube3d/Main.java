@@ -44,9 +44,7 @@ public class Main {
     public Main() {
         try {
             Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
-
             Display.create();
-
             Mouse.setGrabbed(true);
         } catch (LWJGLException e) {
             e.printStackTrace();
@@ -78,7 +76,7 @@ public class Main {
         renderer.camera.processInput();
 
         while (Keyboard.next()) {
-            if (Keyboard.getEventKey() == Keyboard.KEY_Q)
+            if (Keyboard.isKeyDown(Keyboard.KEY_F3))
                 renderer.showDebug ^= true;
         }
     }

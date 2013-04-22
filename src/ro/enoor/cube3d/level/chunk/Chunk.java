@@ -32,10 +32,17 @@ public class Chunk {
     }
 
     private void generate() {
-        for (int x = 0; x < SIZE; x++)
-            for (int y = 0; y < SIZE; y++)
-                for (int z = 0; z < SIZE; z++)
-                    blocks[x][y][z] = Block.STONE.id;
+        for (int x = 0; x < SIZE; x++) {
+            for (int y = 0; y < SIZE; y++) {
+                for (int z = 0; z < SIZE; z++) {
+                    if (y == SIZE - 1) {
+                        blocks[x][y][z] = Block.GRASS.id;
+                    } else {
+                        blocks[x][y][z] = Block.DIRT.id;
+                    }
+                }
+            }
+        }
     }
 
     public int getBlock(int x, int y, int z) {

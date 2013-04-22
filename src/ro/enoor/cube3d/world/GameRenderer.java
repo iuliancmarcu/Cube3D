@@ -24,21 +24,14 @@ public class GameRenderer {
     public GameRenderer(Game game) {
         this.game = game;
         camera.position = new Vector3f(0f, Chunk.SIZE * 2, 0f);
+
+        initGL();
     }
 
-    public void setup3D() {
-        glMatrixMode(GL_PROJECTION);
-        glLoadIdentity();
-        gluPerspective(45f, (float) Main.WIDTH / Main.HEIGHT, 0.1f, Chunk.SIZE * Camera.VIEW_RADIUS);
-        glMatrixMode(GL_MODELVIEW);
-        glLoadIdentity();
-
-        glEnable(GL_DEPTH_TEST);
-        glEnable(GL_CULL_FACE);
+    public void initGL() {
         glEnable(GL_TEXTURE_2D);
-        glEnable(GL_FOG);
 
-        // Setup fog
+        // Init fog
         FloatBuffer fogColor = BufferUtils.createFloatBuffer(4);
         fogColor.put(0.5f).put(0.5f).put(1.0f).put(1.0f).flip();
 
@@ -52,10 +45,23 @@ public class GameRenderer {
         glClearColor(0.5f, 0.5f, 1.0f, 1.0f);
     }
 
+    public void setup3D() {
+        glMatrixMode(GL_PROJECTION);
+        glLoadIdentity();
+        gluPerspective(45f, (float) Main.WIDTH / Main.HEIGHT, 0.1f, Chunk.SIZE * Camera.VIEW_RADIUS);
+        glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
+        glMatrixMode(GL_MODELVIEW);
+        glLoadIdentity();
+
+        glEnable(GL_DEPTH_TEST);
+        glEnable(GL_CULL_FACE);
+        glEnable(GL_FOG);
+    }
+
     private void setup2D() {
         glMatrixMode(GL_PROJECTION);
         glLoadIdentity();
-        glOrtho(0f, Main.WIDTH, 0f, Main.HEIGHT, -1f, 10f);
+        glOrtho(0f, Main.WIDTH, 0f, Main.HEIGHT, -1f, 1f);
         glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
 
@@ -66,8 +72,6 @@ public class GameRenderer {
 
     public void renderWorld() {
         setup3D();
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
         camera.lookThrough();
         manager.renderChunks();
     }
@@ -78,6 +82,8 @@ public class GameRenderer {
     }
 
     public void render() {
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
         renderWorld();
         if (showDebug)
             renderInterface();
